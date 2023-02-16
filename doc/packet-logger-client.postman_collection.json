@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "97693451-ad10-41ab-add7-cb1d030bc9a9",
+		"name": "packet-logger-client",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9385687"
+	},
+	"item": [
+		{
+			"name": "api1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api1?param=test param",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api1"
+					],
+					"query": [
+						{
+							"key": "param",
+							"value": "test param"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api2/:pathVal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api2",
+						":pathVal"
+					],
+					"variable": [
+						{
+							"key": "pathVal",
+							"value": "test path variable"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"test id\",\n    \"name\": \"test name\",\n    \"password\": {\n        \"password\": \"test password\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

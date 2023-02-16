@@ -1,0 +1,20 @@
+packet-logger:
+  enabled: true
+  service_name: logging test client
+  hide_keywords:
+    - password
+  send_headers:
+    - user-agent
+    - x-forwarded-for
+    - x-b3-traceid
+    - content-length
+  receive_headers:
+    - content-length
+    - content-type
+  register_pattern:
+    - /api1
+    - /api2/:pathVal
+    - /api3
+  drop_event:
+    - /api4
+  tag: packet-logger
